@@ -1,0 +1,394 @@
+/* --- Réinitialisation et Variables (Mode Futuriste) --- */
+:root {
+    --bg-color: #05050a; /* Noir très profond */
+    --text-color: #f1f1f9; /* Blanc bleuté très clair */
+    --accent-color: #00d2ff; /* Cyan électrique */
+    --accent-glow: #0077ff; /* Bleu plus profond pour les lueurs */
+    --secondary-color: #0a0a15; /* Un noir légèrement moins profond pour les cartes */
+    
+    /* Variables de Glassmorphism (Effet Verre) */
+    --glass-bg: rgba(20, 20, 30, 0.4); /* Couleur de fond semi-transparente */
+    --glass-blur: blur(12px); /* Intensité du flou derrière le verre */
+    --glass-border: 1px solid rgba(100, 100, 100, 0.2); /* Bordure discrète */
+    
+    /* Police principale */
+    --main-font: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+html {
+    scroll-behavior: smooth; /* Défilement fluide */
+    background-color: var(--bg-color);
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Fond avec circuit imprimé (Fixé) --- */
+.circuit-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('image_0.png'); /* Ton image de circuit */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.2; /* Réduit l'intensité pour que les cartes en verre ressortent */
+    z-index: -1; /* Place le fond derrière tout le reste */
+}
+
+/* --- Utilitaires de Design Futuriste --- */
+.glow-text {
+    text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-glow);
+    font-weight: 700;
+}
+
+.highlight {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* Applique l'effet de verre dépoli à n'importe quel élément */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* --- En-tête (Nav Bar) - Effet Verre Flottant --- */
+header {
+    background: rgba(10, 10, 20, 0.6); /* Fond plus opaque pour la lisibilité */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text-color);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Toujours au-dessus du contenu au scroll */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+header .logo .accent {
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-glow);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+/* --- Section Accueil (Hero) --- */
+.hero {
+    height: 100vh; /* Toute la hauteur de l'écran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style des boutons d'accueil (Futuristes) */
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 50px; /* Bords très arrondis */
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Bouton principal (Néon) */
+.btn-primary {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 25px rgba(0, 210, 255, 0.6);
+    transform: translateY(-3px);
+}
+
+/* Bouton secondaire (Lumière subtile) */
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* --- Section Compétences --- */
+.skills-section {
+    padding: 8rem 5%;
+    text-align: center;
+}
+
+.skills-section h2 {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.skill-category {
+    background-color: rgba(255, 255, 255, 0.02); /* Fond très léger */
+    padding: 2rem;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 280px;
+    border: 1px solid rgba(100, 100, 100, 0.1);
+}
+
+.skill-category h3 {
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+
+.skills-grid img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+}
+
+.skills-grid img:hover {
+    transform: translateY(-5px) scale(1.1);
+    filter: drop-shadow(0 0 10px var(--accent-glow)) grayscale(0%);
+}
+
+/* --- Section Projets --- */
+.projects-section {
+    padding: 8rem 5%;
+    text-align: center;
+}
+
+.projects-section h2 {
+    margin-bottom: 4rem;
+    font-size: 3rem;
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    padding: 2.5rem;
+    width: 350px;
+    text-align: left;
+    transition: all 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 210, 255, 0.2);
+    border-color: rgba(0, 210, 255, 0.3);
+}
+
+.project-card h3 {
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.project-card p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* Style des étiquettes (Badges) */
+.tech-tags {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.tech-tags span {
+    background-color: rgba(0, 210, 255, 0.1);
+    color: var(--accent-color);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+/* --- Section Contact --- */
+.contact-section {
+    padding: 8rem 5%;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.contact-section p {
+    margin-bottom: 4rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    padding: 3rem;
+    width: 320px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.4s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 210, 255, 0.2);
+    border-color: rgba(0, 210, 255, 0.3);
+}
+
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    transform: scale(1.15);
+}
+
+.contact-card h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.contact-card p {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: var(--accent-color);
+    font-size: 1rem;
+}
+
+/* --- Pied de page --- */
+footer {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--bg-color);
+    color: rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- Adaptabilité (Responsivité) pour mobiles --- */
+@media (max-width: 768px) {
+    header .logo { font-size: 1.4rem; }
+    nav ul { gap: 1rem; }
+    nav a { font-size: 1rem; }
+    .hero h1 { font-size: 2.5rem; }
+    .hero p { font-size: 1.1rem; }
+    .hero-buttons { flex-direction: column; gap: 1rem; }
+    .skills-container { padding: 1.5rem; }
+    .project-card, .contact-card { width: 100%; max-width: 400px; }
+}

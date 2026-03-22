@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio Futuriste</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="circuit-bg"></div>
+
+    <header>
+        <div class="logo">Mon <span class="accent">Portfolio</span></div>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1 class="glow-text">Bonjour, je suis <span class="highlight">AGBE Simisola</span></h1>
+            <p>Développeur Fullstack & passionné par la web.</p>
+            
+            <div class="hero-buttons">
+                <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                <a href="#competences" class="btn btn-primary">Voir mes compétences</a>
+                <a href="cv-agbesimi.pdf" download="CV_Agbesimi" class="btn btn-outline">Télécharger mon CV</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="skills-section">
+        <h2 class="glow-text">Mes Compétences Techniques</h2>
+        <div class="skills-container glass">
+            <div class="skill-category">
+                <h3>Front-end</h3>
+                <div class="skills-grid">
+                    <img src="logos/html.png" alt="HTML" title="HTML">
+                    <img src="logos/css.png" alt="CSS" title="CSS">
+                    <img src="logos/js.png" alt="JavaScript" title="JavaScript">
+                    <img src="logos/react.png" alt="React" title="React">
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Back-end & API</h3>
+                <div class="skills-grid">
+                    <img src="logos/PHP-log.png" alt="PHP" title="PHP">
+                    <img src="logos/symfony-logo.jpg" alt="Symfony" title="Symfony">
+                    <img src="logos/api.png" alt="API Platform" title="API Platform">
+                    <img src="logos/python.png" alt="Python" title="Python">
+                    <img src="logos/csharp.png" alt="C#" title="C#">
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>BDD & Outils</h3>
+                <div class="skills-grid">
+                    <img src="logos/sql.png" alt="SQL" title="SQL">
+                    <img src="logos/git.png" alt="Git" title="Git">
+                    <img src="logos/docker.png" alt="Docker" title="Docker">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="projects-section">
+        <h2 class="glow-text">Mes Projets Récents</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card glass">
+                <h3>Guide Touristique Rémois</h3>
+                <p>Plateforme web dédiée au tourisme local (restaurants, monuments, parcours).</p>
+                <div class="tech-tags">
+                    <span>PHP</span>
+                    <span>Symfony</span>
+                </div>
+            </div>
+
+            <div class="project-card glass">
+                <h3>Visualisation de Données</h3>
+                <p>Analyse et traitement de données avec tableaux de bord interactifs.</p>
+                <div class="tech-tags">
+                    <span>SQL</span>
+                    <span>PowerBI</span>
+                </div>
+            </div>
+
+            <div class="project-card glass">
+                <h3>Générateur de Labyrinthe</h3>
+                <p>Application logicielle de génération procédurale d'algorithmes complexes.</p>
+                <div class="tech-tags">
+                    <span>Python</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="glow-text">Me Contacter</h2>
+        <p>Un projet en tête ? Contactez-moi !</p>
+        
+        <div class="contact-container">
+            <a href="mailto:agbesimi10@gmail.com" class="contact-card glass">
+                <div class="contact-icon">✉️</div>
+                <h3>Email</h3>
+                <p>agbesimi10@gmail.com</p>
+            </a>
+            <a href="tel:+33745365697" class="contact-card glass">
+                <div class="contact-icon">📞</div>
+                <h3>Téléphone</h3>
+                <p>07 45 36 56 97</p>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AGBE Simisola. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
