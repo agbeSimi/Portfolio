@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="circuit-bg"></div>
 
     <header>
         <div class="logo">Mon <span class="accent">Portfolio</span></div>
         <nav>
-            <ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#projets">Projets</a></li>
@@ -26,7 +30,7 @@
     <section id="accueil" class="hero">
         <div class="hero-content">
             <h1 class="glow-text">Bonjour, je suis <span class="highlight">AGBE Simisola</span></h1>
-            <p>Développeur Fullstack & passionné par la web.</p>
+            <p>Développeur Fullstack (Symfony / React) & passionné par la dev web.</p>
             
             <div class="hero-buttons">
                 <a href="#projets" class="btn btn-primary">Voir mes projets</a>
@@ -126,5 +130,6 @@
         <p>&copy; 2026 AGBE Simisola. Tous droits réservés.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
