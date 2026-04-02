@@ -454,3 +454,54 @@ footer {
     #mobile-menu.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     #mobile-menu.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
+
+/* --- Bouton Retour en haut --- */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border-radius: 50%; /* Rend le bouton parfaitement rond */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.5); /* Lueur néon */
+    z-index: 999;
+    
+    /* Animation pour le cacher au départ */
+    opacity: 0; 
+    pointer-events: none; /* On ne peut pas cliquer dessus quand il est caché */
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+/* Classe ajoutée par le JavaScript pour le faire apparaître */
+.back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: white;
+    color: var(--accent-color);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    transform: translateY(-5px); /* Petit saut au survol */
+}
+
+/* Sur mobile, on le décale un peu pour éviter qu'il ne gêne avec les pouces */
+@media screen and (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+}

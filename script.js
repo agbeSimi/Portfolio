@@ -27,3 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// --- NOUVEAU : Logique du bouton "Retour en haut" ---
+            const backToTopButton = document.querySelector('#backToTop');
+
+            window.addEventListener('scroll', () => {
+                // Si on descend de plus de 300 pixels, le bouton apparaît
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    // Sinon, il disparaît
+                    backToTopButton.classList.remove('show');
+                }
+            });
