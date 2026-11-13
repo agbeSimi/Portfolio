@@ -34,10 +34,10 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('fond-info.png');
+    background-image: url('fond-info.jpg');
+    background-image: image-set(url('fond-info.webp') type('image/webp'), url('fond-info.jpg') type('image/jpeg'));
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     opacity: 0.2;
     z-index: -1;
 }
