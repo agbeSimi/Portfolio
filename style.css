@@ -3,6 +3,14 @@
    Palette : blanc craie, encre, un seul accent vert bouteille.
    ========================================================== */
 
+@font-face {
+    font-family: "Schibsted Grotesk";
+    src: url("fonts/schibsted-grotesk.woff2") format("woff2");
+    font-weight: 400 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --paper: #F3F4F1;
     --ink: #1B1F23;
