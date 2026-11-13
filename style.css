@@ -318,3 +318,68 @@ a {
 @media (max-width: 640px) {
     .project-list { grid-template-columns: 1fr; gap: 2rem; }
 }
+
+/* --- Compétences --- */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem 3rem;
+}
+
+.skills dt {
+    font-size: 0.875rem;
+    color: var(--muted);
+    margin-bottom: 0.2rem;
+}
+
+.skills dd {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+@media (max-width: 520px) {
+    .skills { grid-template-columns: 1fr; }
+}
+
+/* --- Parcours --- */
+.timeline-groups {
+    display: grid;
+    gap: 3rem;
+}
+
+.group-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.timeline {
+    list-style: none;
+}
+
+.timeline li {
+    display: grid;
+    grid-template-columns: 11rem 1fr;
+    gap: 0.25rem 2rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--line);
+}
+
+.when {
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.what {
+    font-weight: 600;
+}
+
+.detail {
+    color: var(--muted);
+}
+
+@media (max-width: 640px) {
+    .timeline li { grid-template-columns: 1fr; }
+}
