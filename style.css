@@ -864,3 +864,37 @@ footer {
     .timeline-columns { grid-template-columns: 1fr; }
     .timeline-section h2 { font-size: 2.2rem; }
 }
+
+/* --- Animations d'apparition --- */
+.js .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.js .reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .skills-section h2,
+    .projects-section h2,
+    .contact-section h2 { font-size: 2.2rem; }
+    .skills-section, .projects-section, .contact-section, .timeline-section { padding-top: 6rem; padding-bottom: 4rem; }
+    .project-card { padding: 1.6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .js .reveal { opacity: 1; transform: none; }
+}
