@@ -558,8 +558,8 @@ nav {
 }
 
 .contact-card {
-    padding: 3rem;
-    width: 320px;
+    padding: 2.5rem;
+    width: 300px;
     text-decoration: none;
     color: inherit;
     transition: all 0.4s ease;
