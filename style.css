@@ -22,7 +22,7 @@
     --on-accent: #FFFFFF;
 
     --font: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
-    --wrap: 72rem;
+    --wrap: 67rem;
     --gutter: clamp(1.25rem, 4vw, 3rem);
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -82,9 +82,8 @@ a {
 }
 
 .wrap {
-    max-width: var(--wrap);
+    width: min(100% - 2 * var(--gutter), var(--wrap));
     margin-inline: auto;
-    padding-inline: var(--gutter);
 }
 
 .skip-link {
@@ -163,7 +162,7 @@ a {
     font-weight: 800;
     line-height: 0.88;
     letter-spacing: -0.045em;
-    margin-bottom: 2rem;
+    margin-bottom: 2.75rem;
 }
 
 .hero-lede {
