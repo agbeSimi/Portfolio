@@ -458,10 +458,45 @@ nav {
 }
 
 .project-card {
-    padding: 2.5rem;
+    padding: 2rem;
     width: 350px;
     text-align: left;
     transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card.featured {
+    border-color: rgba(0, 210, 255, 0.35);
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.12);
+}
+
+.project-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.project-icon {
+    font-size: 2rem;
+}
+
+.project-context {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-align: right;
+}
+
+.project-card .tech-tags {
+    margin-top: auto;
+}
+
+.projects-more {
+    margin-top: 3rem;
 }
 
 .project-card:hover {
@@ -471,7 +506,7 @@ nav {
 }
 
 .project-card h3 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--accent-color);
     font-size: 1.4rem;
     font-weight: 600;
